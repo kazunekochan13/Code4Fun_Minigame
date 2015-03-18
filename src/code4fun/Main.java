@@ -4,16 +4,10 @@
 */
 package code4fun;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.util.ArrayList;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
         
 public class Main extends JPanel{
 
@@ -57,6 +51,7 @@ public class Main extends JPanel{
     }
     
     public void update(){
+        
         for (int i=0;i<ball.size();i++){
             for (int j=0; j<ball.size();j++){
                 if (i==j){
@@ -76,6 +71,7 @@ public class Main extends JPanel{
             }
             ball.get(i).Collision();
         }
+        
     }
 
     public static void main(String[] args)  throws InterruptedException{
@@ -94,6 +90,12 @@ public class Main extends JPanel{
                 Game.ball.add(new Ball(e.getX()-5,e.getY()-5));
             }
         });
+        Game.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                
+        }});
+        
             Game.ball.add(new Ball(50,50));
             Game.ball.add(new Ball(100,100));
         while (true){
