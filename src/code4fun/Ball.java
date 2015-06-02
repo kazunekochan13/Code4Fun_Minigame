@@ -17,7 +17,7 @@ public class Ball  {
     int vx=2;
     int vy=2;
     int minx=0;
-    int miny=40;
+    int miny=0;
     int maxx=578;
     int maxy=557;
     

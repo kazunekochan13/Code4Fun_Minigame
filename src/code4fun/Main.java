@@ -90,11 +90,6 @@ public class Main extends JPanel{
                 Game.ball.add(new Ball(e.getX()-5,e.getY()-5));
             }
         });
-        Game.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e){
-                
-        }});
         
             Game.ball.add(new Ball(50,50));
             Game.ball.add(new Ball(100,100));
